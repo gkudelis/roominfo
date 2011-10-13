@@ -1,0 +1,24 @@
+table#bookings {
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table#bookings td {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: center;
+	width: 12%;
+	
+	font-size: 12px;
+	font-weight: bold;
+}
+
+tr.room_row {
+	height: 80px;
+}
+
+td.taken {
+	background-color: #A12934;
+	color: #F9FFBF;
+}

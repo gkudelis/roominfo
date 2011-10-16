@@ -1,1 +1,17 @@
-body {	margin: 0px;	background-color: #FEFFF2;	font-family: Verdana, Arial, sans-serif;	color: #1D4B6B;	font-size: 14px;}div#header {	background-color: #F9FFBF;	overflow: hidden;	padding: 10px 30px;}div#content {}
+body {
+	margin: 0px;
+	background-color: #FEFEFE;
+	font-family: Verdana, Arial, sans-serif;
+	color: #939393;
+	font-size: 14px;
+}
+
+div#header {
+	background-color: #FEFEFE;
+	font-family: Verdana, Arial, sans-serif;
+	overflow: hidden;
+	padding: 10px 30px;
+}
+
+div#content {
+}

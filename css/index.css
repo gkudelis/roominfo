@@ -1,11 +1,15 @@
+h1 {
+    margin-left: 200px;
+    color: #17416D;
+}
+
 table#bookings {
 	width: 100%;
-	border: 1px solid black;
 	border-collapse: collapse;
 }
 
 table#bookings td {
-	border: 1px solid black;
+	border: 1px solid #B0B0B0;
 	text-align: center;
 	vertical-align: center;
 	width: 12%;
@@ -14,11 +18,42 @@ table#bookings td {
 	font-weight: bold;
 }
 
+tr#times {
+    color: #17416D;
+}
+
+td.room_name {
+    color: #17416D;
+}
+
 tr.room_row {
 	height: 80px;
 }
 
 td.taken {
-	background-color: #A12934;
-	color: #F9FFBF;
+	background-color: #939393;
+	color: #FEFEFE;
+}
+
+button.corner {
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+    height: 100px;
+    width: 60px;
+	background-color: #939393;
+	color: #FEFEFE;
+    border: none;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+button.corner#left {
+    left: 0px;
+    border-top-right-radius: 10px;
+}
+
+button.corner#right {
+    right: 0px;
+    border-top-left-radius: 10px;
 }

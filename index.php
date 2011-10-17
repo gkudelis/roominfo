@@ -12,8 +12,8 @@ $smarty->cache_dir = ROOT_DIR.'smarty/cache';
 $smarty->compile_dir = ROOT_DIR.'smarty/templates_c';
 
 # Connect to the database
-#mssql_connect(DBSERVER, DBUSERNAME, DBPASSWORD);
-#mssql_select_db(DBNAME);
+mssql_connect(DBSERVER, DBUSERNAME, DBPASSWORD);
+mssql_select_db(DBNAME);
 
 # Get current time and extract the last half-hour mark
 $now_time = localtime(time(), true);
@@ -38,9 +38,9 @@ while ($cur_time < $end_time) {
 }
 
 # Select all rooms for DB
-#$rooms = array();
-#$res = mssql_query("...");
-#while ($row = mssql_fetch_assoc($res)) $rooms[] = $row;
+$rooms = array();
+$res = mssql_query("SELECT Room_ID, [Meeting Room] FROM Rooms");
+while ($row = mssql_fetch_assoc($res)) $rooms[] = $row;
 
 ## Query the DB for reservations in the current time period
 #$reservations = array();
@@ -54,8 +54,9 @@ while ($cur_time < $end_time) {
 #}
 
 ## Disconnect from the database
-#mssql_close();
+mssql_close();
 
+$smarty->assign('rooms', $rooms);
 $smarty->assign('times', $times);
 $smarty->display('index.tpl');
 ?>

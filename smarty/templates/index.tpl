@@ -16,16 +16,17 @@
         <td>{$time}</td>
     {/foreach}
 </tr>
-
-<tr id="mandella" class="room_row">
-	<td class="room_name">Mandella</td>
-	<td colspan=2 class="taken">This room is reserved by the president</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-</tr>
+{foreach from=$rooms item=room}
+	<tr id="{$room['Room_ID']}" class="room_row">
+		<td class="room_name">{$room['Meeting Room']}</td>
+		<td colspan=2 class="taken">This room is reserved by the president</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+{/foreach}
 </table>
 
 <form action="" method="GET">

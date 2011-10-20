@@ -6,6 +6,9 @@
 	{block name=css}
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	{/block}
+	{block name=js}
+	<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+	{/block}
 </head>
 <body>
 	<div id="header">
